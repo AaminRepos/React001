@@ -1,8 +1,15 @@
-import React from "react";
+import React, { Children } from "react";
 
-const Button = () => {
-  return(
-     <button type="button" className="btn btn-primary">Primary</button>
-    )
+interface Props {
+  children: String;
+  color?: string;
+  onClick: () => void;
 }
-export default Button
+
+const Button = ({ children, onClick, color}: Props) => {
+  return (
+    <button className={'btn btn-'+ color} 
+    onClick={onClick}>{children}</button>
+  )
+};
+export default Button;
