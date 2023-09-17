@@ -1,14 +1,8 @@
-import Alert from "./components/Alert";
-
+import Button from "./components/Buton";
 function App() {
-  
-
   return (
     <div>
-      <Alert>
-        !Alert<span> "Flooding" </span>Alert!
-      </Alert>
-      
+      <Button></Button>
     </div>
   );
 }
