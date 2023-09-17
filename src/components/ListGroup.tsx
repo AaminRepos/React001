@@ -2,14 +2,22 @@
 //and keep the first tags empty
 
 function ListGroup() {
-  const items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+  items = [];
 
-  items.map((item) => <li>{item}</li>);
+  const message = {}
+
+  //const getMessage = () => {
+    //return items.length ===0 ? <p>No tems Found</p>: null;;
+  //}
 
   return (
     //<Fragment>
     <>
       <h1>List</h1>
+      
+      {items.length === 0 && <p>No items found</p> }
+
       <ul className="list-group">
         {items.map((item) => (
           <li key={item}>{item}</li>
